@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+void check(int age) {
+    if(age < 18)
+        throw age;
+}
+
+int main() {
+    try {
+        check(15);
+    }
+    catch(int a) {
+        cout << "Underage: " << a;
+    }
+}
