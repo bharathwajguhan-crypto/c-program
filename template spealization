@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+template <typename T>
+class Printer {
+public:
+    void print(T value) {
+        cout << value;
+    }
+};
+
+template <>
+class Printer<string> {
+public:
+    void print(string value) {
+        cout << "String: " << value;
+    }
+};
+
+int main() {
+    Printer<string> p;
+    p.print("Hello");
+}
