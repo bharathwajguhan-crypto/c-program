@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+template <typename T>
+class Base {
+public:
+    T value;
+};
+
+class Derived : public Base<int> {
+public:
+    void show() {
+        value = 50;
+        cout << value;
+    }
+};
+
+int main() {
+    Derived d;
+    d.show();
+}
