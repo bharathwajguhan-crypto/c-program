@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int balance = 500;
+    int withdraw = 1000;
+
+    try {
+        if(withdraw > balance)
+            throw "Insufficient Balance";
+    }
+    catch(const char* msg) {
+        cout << msg;
+    }
+}
